@@ -30,5 +30,9 @@
   },
   "dependencies": {
     "dequal": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeKlech/react-gallery-grid.git"
   }
 }
