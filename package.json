@@ -9,7 +9,7 @@
     "build": "rollup -c"
   },
   "author": "mikeKlech",
-  "license": "ISC",
+  "license": "MIT",
   "peerDependencies": {
     "react": ">18.0.0"
   },
@@ -33,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikeKlech/react-gallery-grid.git"
+    "url": "git+https://github.com/mikeKlech/react-gallery-grid.git"
   }
 }
