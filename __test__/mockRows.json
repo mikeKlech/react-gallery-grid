@@ -1,0 +1,527 @@
+[
+    {
+        "items": [
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 137.71428571428572,
+                    "height": 275.42857142857144
+                },
+                "isCropped": true,
+                "originalRatio": 0.4219409282700422
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 137.71428571428572,
+                    "height": 275.42857142857144
+                },
+                "isCropped": true,
+                "originalRatio": 0.21768707482993196
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 137.71428571428572,
+                    "height": 275.42857142857144
+                },
+                "isCropped": true,
+                "originalRatio": 0.26246719160104987
+            },
+            {
+                "ratio": 2,
+                "size": {
+                    "width": 550.8571428571429,
+                    "height": 275.42857142857144
+                },
+                "isCropped": true,
+                "originalRatio": 3.7914691943127963
+            }
+        ],
+        "height": 275.42857142857144
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.89375,
+                "size": {
+                    "width": 257.61474098445996,
+                    "height": 288.24026963296217
+                },
+                "isCropped": false,
+                "originalRatio": 0.89375
+            },
+            {
+                "ratio": 1.1477761836441893,
+                "size": {
+                    "width": 330.83531665189344,
+                    "height": 288.24026963296217
+                },
+                "isCropped": false,
+                "originalRatio": 1.1477761836441893
+            },
+            {
+                "ratio": 1.3445378151260505,
+                "size": {
+                    "width": 387.54994236364666,
+                    "height": 288.24026963296217
+                },
+                "isCropped": false,
+                "originalRatio": 1.3445378151260505
+            }
+        ],
+        "height": 288.24026963296217
+    },
+    {
+        "items": [
+            {
+                "ratio": 1.937046004842615,
+                "size": {
+                    "width": 645.393786733837,
+                    "height": 333.1845424013434
+                },
+                "isCropped": false,
+                "originalRatio": 1.937046004842615
+            },
+            {
+                "ratio": 1.0282776349614395,
+                "size": {
+                    "width": 342.60621326616285,
+                    "height": 333.1845424013434
+                },
+                "isCropped": false,
+                "originalRatio": 1.0282776349614395
+            }
+        ],
+        "height": 333.1845424013434
+    },
+    {
+        "items": [
+            {
+                "ratio": 1.391304347826087,
+                "size": {
+                    "width": 381.66949219337783,
+                    "height": 274.3249475139903
+                },
+                "isCropped": false,
+                "originalRatio": 1.391304347826087
+            },
+            {
+                "ratio": 1.0554089709762533,
+                "size": {
+                    "width": 289.52501056885524,
+                    "height": 274.3249475139903
+                },
+                "isCropped": false,
+                "originalRatio": 1.0554089709762533
+            },
+            {
+                "ratio": 1.1111111111111112,
+                "size": {
+                    "width": 304.80549723776704,
+                    "height": 274.3249475139903
+                },
+                "isCropped": false,
+                "originalRatio": 1.1111111111111112
+            }
+        ],
+        "height": 274.3249475139903
+    },
+    {
+        "items": [
+            {
+                "ratio": 1.694915254237288,
+                "size": {
+                    "width": 453.2110091743119,
+                    "height": 267.39449541284404
+                },
+                "isCropped": false,
+                "originalRatio": 1.694915254237288
+            },
+            {
+                "ratio": 2,
+                "size": {
+                    "width": 534.7889908256881,
+                    "height": 267.39449541284404
+                },
+                "isCropped": true,
+                "originalRatio": 3.7914691943127963
+            }
+        ],
+        "height": 267.39449541284404
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 130.93913441077677,
+                    "height": 261.87826882155355
+                },
+                "isCropped": true,
+                "originalRatio": 0.2625
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 130.93913441077677,
+                    "height": 261.87826882155355
+                },
+                "isCropped": true,
+                "originalRatio": 0.2175
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 130.93913441077677,
+                    "height": 261.87826882155355
+                },
+                "isCropped": true,
+                "originalRatio": 0.4225
+            },
+            {
+                "ratio": 1.1251758087201125,
+                "size": {
+                    "width": 294.65909290751455,
+                    "height": 261.87826882155355
+                },
+                "isCropped": false,
+                "originalRatio": 1.1251758087201125
+            },
+            {
+                "ratio": 1.0101010101010102,
+                "size": {
+                    "width": 264.52350386015513,
+                    "height": 261.87826882155355
+                },
+                "isCropped": false,
+                "originalRatio": 1.0101010101010102
+            }
+        ],
+        "height": 261.87826882155355
+    },
+    {
+        "items": [
+            {
+                "ratio": 1.7241379310344827,
+                "size": {
+                    "width": 503.38469473277024,
+                    "height": 291.9631229450068
+                },
+                "isCropped": false,
+                "originalRatio": 1.7241379310344827
+            },
+            {
+                "ratio": 0.86875,
+                "size": {
+                    "width": 253.64296305847463,
+                    "height": 291.9631229450068
+                },
+                "isCropped": false,
+                "originalRatio": 0.86875
+            },
+            {
+                "ratio": 0.75,
+                "size": {
+                    "width": 218.9723422087551,
+                    "height": 291.9631229450068
+                },
+                "isCropped": false,
+                "originalRatio": 0.75
+            }
+        ],
+        "height": 291.9631229450068
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.9313154831199069,
+                "size": {
+                    "width": 286.3224716763696,
+                    "height": 307.4387539625019
+                },
+                "isCropped": false,
+                "originalRatio": 0.9313154831199069
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 153.71937698125095,
+                    "height": 307.4387539625019
+                },
+                "isCropped": true,
+                "originalRatio": 0.39158100832109644
+            },
+            {
+                "ratio": 0.9937888198757764,
+                "size": {
+                    "width": 305.5291964844739,
+                    "height": 307.4387539625019
+                },
+                "isCropped": false,
+                "originalRatio": 0.9937888198757764
+            },
+            {
+                "ratio": 0.7104795737122558,
+                "size": {
+                    "width": 218.42895485790544,
+                    "height": 307.4387539625019
+                },
+                "isCropped": false,
+                "originalRatio": 0.7104795737122558
+            }
+        ],
+        "height": 307.4387539625019
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.9375,
+                "size": {
+                    "width": 267.1840354767184,
+                    "height": 284.99630450849963
+                },
+                "isCropped": false,
+                "originalRatio": 0.9375
+            },
+            {
+                "ratio": 0.7425,
+                "size": {
+                    "width": 211.609756097561,
+                    "height": 284.99630450849963
+                },
+                "isCropped": false,
+                "originalRatio": 0.7425
+            },
+            {
+                "ratio": 0.71,
+                "size": {
+                    "width": 202.34737620103473,
+                    "height": 284.99630450849963
+                },
+                "isCropped": false,
+                "originalRatio": 0.71
+            },
+            {
+                "ratio": 0.9925,
+                "size": {
+                    "width": 282.8588322246859,
+                    "height": 284.99630450849963
+                },
+                "isCropped": false,
+                "originalRatio": 0.9925
+            }
+        ],
+        "height": 284.99630450849963
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.84625,
+                "size": {
+                    "width": 227.3598232006901,
+                    "height": 268.6674424823517
+                },
+                "isCropped": false,
+                "originalRatio": 0.84625
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 134.33372124117585,
+                    "height": 268.6674424823517
+                },
+                "isCropped": true,
+                "originalRatio": 0.3925
+            },
+            {
+                "ratio": 0.9325,
+                "size": {
+                    "width": 250.53239011479297,
+                    "height": 268.6674424823517
+                },
+                "isCropped": false,
+                "originalRatio": 0.9325
+            },
+            {
+                "ratio": 1.309328968903437,
+                "size": {
+                    "width": 351.77406544334104,
+                    "height": 268.6674424823517
+                },
+                "isCropped": false,
+                "originalRatio": 1.309328968903437
+            }
+        ],
+        "height": 268.6674424823517
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.59375,
+                "size": {
+                    "width": 150.56065123517268,
+                    "height": 253.5758336592382
+                },
+                "isCropped": false,
+                "originalRatio": 0.59375
+            },
+            {
+                "ratio": 0.88125,
+                "size": {
+                    "width": 223.46370341220367,
+                    "height": 253.5758336592382
+                },
+                "isCropped": false,
+                "originalRatio": 0.88125
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 126.7879168296191,
+                    "height": 253.5758336592382
+                },
+                "isCropped": true,
+                "originalRatio": 0.4025
+            },
+            {
+                "ratio": 0.8025,
+                "size": {
+                    "width": 203.49460651153868,
+                    "height": 253.5758336592382
+                },
+                "isCropped": false,
+                "originalRatio": 0.8025
+            },
+            {
+                "ratio": 0.9768009768009768,
+                "size": {
+                    "width": 247.6931220114659,
+                    "height": 253.5758336592382
+                },
+                "isCropped": false,
+                "originalRatio": 0.9768009768009768
+            }
+        ],
+        "height": 253.5758336592382
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 150.76422764227644,
+                    "height": 301.5284552845529
+                },
+                "isCropped": true,
+                "originalRatio": 0.3292181069958848
+            },
+            {
+                "ratio": 1.4035087719298245,
+                "size": {
+                    "width": 423.1978319783198,
+                    "height": 301.5284552845529
+                },
+                "isCropped": false,
+                "originalRatio": 1.4035087719298245
+            },
+            {
+                "ratio": 1.3333333333333333,
+                "size": {
+                    "width": 402.03794037940384,
+                    "height": 301.5284552845529
+                },
+                "isCropped": false,
+                "originalRatio": 1.3333333333333333
+            }
+        ],
+        "height": 301.5284552845529
+    },
+    {
+        "items": [
+            {
+                "ratio": 2,
+                "size": {
+                    "width": 561.3227893601726,
+                    "height": 280.6613946800863
+                },
+                "isCropped": true,
+                "originalRatio": 2.2408963585434174
+            },
+            {
+                "ratio": 0.5,
+                "size": {
+                    "width": 140.33069734004314,
+                    "height": 280.6613946800863
+                },
+                "isCropped": true,
+                "originalRatio": 0.32875
+            },
+            {
+                "ratio": 0.9775,
+                "size": {
+                    "width": 274.34651329978436,
+                    "height": 280.6613946800863
+                },
+                "isCropped": false,
+                "originalRatio": 0.9775
+            }
+        ],
+        "height": 280.6613946800863
+    },
+    {
+        "items": [
+            {
+                "ratio": 1.10803324099723,
+                "size": {
+                    "width": 283.4752179730346,
+                    "height": 255.8363842206637
+                },
+                "isCropped": false,
+                "originalRatio": 1.10803324099723
+            },
+            {
+                "ratio": 0.87875,
+                "size": {
+                    "width": 224.8162226339082,
+                    "height": 255.8363842206637
+                },
+                "isCropped": false,
+                "originalRatio": 0.87875
+            },
+            {
+                "ratio": 0.835,
+                "size": {
+                    "width": 213.62338082425418,
+                    "height": 255.8363842206637
+                },
+                "isCropped": false,
+                "originalRatio": 0.835
+            },
+            {
+                "ratio": 0.94625,
+                "size": {
+                    "width": 242.08517856880303,
+                    "height": 255.8363842206637
+                },
+                "isCropped": false,
+                "originalRatio": 0.94625
+            }
+        ],
+        "height": 255.8363842206637
+    },
+    {
+        "items": [
+            {
+                "ratio": 0.55125,
+                "size": {
+                    "width": 187.425,
+                    "height": 340
+                },
+                "isCropped": false,
+                "originalRatio": 0.55125
+            }
+        ],
+        "height": 340
+    }
+]
