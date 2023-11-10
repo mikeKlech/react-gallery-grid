@@ -1,6 +1,4 @@
-# React Gallery Grid - Justified Layout with Infinite Scroll Support
-
-[![CI](https://cdn.creazilla.com/logo/designed-by-creazilla-bold.svg)](https://creazilla.com/)
+# React Gallery Grid - Justified Layout with Infinite Scroll Support[![Creazilla](https://cdn.creazilla.com/logo/designed-by-creazilla-bold.svg)](https://creazilla.com/)
 
 Create stunning, responsive galleries effortlessly with React Gallery Grid. This versatile component offers a justified layout, ensuring that your images are elegantly arranged with consistent row heights. Supporting infinite scroll allows users to comfortably explore your gallery without interruption by page toggling.
 
@@ -206,6 +204,12 @@ type BoxType = {width: number, height: number, left: number, top: number};
 | fitBox               | BoxType  | Helper field to fit the image into the size. Analogous to the 'object-fit: contain' CSS property for the <img/> tag. |
 | aspectRatioPreserved | boolean  | Indicates whether the aspect ratio was preserved or not.                                                             |
 
+## Used By
+
+This project is used by the following companies:
+
+- [Creazilla](https://creazilla.com/)
+
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://choosealicense.com/licenses/mit/) Developed by [@mikeKlech](https://github.com/mikeKlech) for [Creazilla](https://creazilla.com/)
