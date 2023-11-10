@@ -1,6 +1,6 @@
 {
   "name": "react-gallery-grid",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Justified grid for gallery.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -35,5 +35,16 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikeKlech/react-gallery-grid.git"
-  }
+  },
+  "keywords": [
+    "react",
+    "justified",
+    "gallery",
+    "grid",
+    "photo",
+    "photos",
+    "image",
+    "images",
+    "equal height"
+  ]
 }
