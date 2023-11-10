@@ -1,4 +1,6 @@
-# React Gallery Grid - Justified Layout with Infinite Scroll Support[![Creazilla](https://cdn.creazilla.com/logo/designed-by-creazilla-bold.svg)](https://creazilla.com/)
+# React Gallery Grid - Justified Layout with Infinite Scroll Support
+
+[![Creazilla](https://cdn.creazilla.com/logo/designed-by-creazilla-bold.svg)](https://creazilla.com/)
 
 Create stunning, responsive galleries effortlessly with React Gallery Grid. This versatile component offers a justified layout, ensuring that your images are elegantly arranged with consistent row heights. Supporting infinite scroll allows users to comfortably explore your gallery without interruption by page toggling.
 
