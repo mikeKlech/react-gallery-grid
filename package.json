@@ -6,7 +6,8 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "ts-jest"
   },
   "author": "mikeKlech",
   "license": "MIT",

@@ -5,22 +5,22 @@ import useGalleryRows from "./useGalleryRows";
 import useMeasure from "./useMeasure";
 
 type RendererProps<T extends SizeType> = {
-  /** Index of item in original array. */
+  /** The index of the item in the original array. */
   index: number;
-  /** Rendering size of item. */
+  /** The rendering size of the item. */
   size: SizeType;
-  /** Helper fields to fill the image size. Analog of "object-fit: cover" css property for <img/> tag.  */
+  /** Helper field to fill the image size. Analogous to the 'object-fit: cover' CSS property for the <img/> tag. */
   cropBox: BoxType;
-  /** Helper fields to fit the image into the size. Analog of "object-fit: contain" css property for <img/> tag.  */
+  /** Helper field to fit the image into the size. Analogous to the 'object-fit: contain' CSS property for the <img/> tag.  */
   fitBox: BoxType;
   /** The original item. */
   item: T;
-  /** Aspect ratio was preserved or not. */
+  /** Indicates whether the aspect ratio was preserved or not. */
   aspectRatioPreserved: boolean;
 };
 
 type GalleryProps<T extends SizeType> = {
-  /** Items we need to put into the rows. Each item should have 'width' and 'height' properties. */
+  /** Items need to be placed into the rows. Each item should have 'width' and 'height' properties. */
   items: T[];
   /** Renderer for every item where in props you can get extra info about the item and its size. */
   itemRenderer: React.FC<RendererProps<T>>;
@@ -28,15 +28,15 @@ type GalleryProps<T extends SizeType> = {
   keyExtractor?: (item: T, index: number) => string | number;
   /** Gap between rows and columns. */
   gap?: number;
-  /** Minimum and maximum row's heights. Works when preserveAspectRatio set to false.*/
-  heightRange?: RangeType;
-  /** Minimum and maximum aspect ratio of every item. Works when preserveAspectRatio set to false.*/
+  /** Minimum and maximum row heights. Works when preserveAspectRatio is set to false.*/
+  rowHeightRange?: RangeType;
+  /** Minimum and maximum aspect ratio of every item. Works when preserveAspectRatio is set to false.*/
   itemRatioRange?: RangeType;
   /** Max columns (items) in the row.*/
   maxColumns?: number;
   /** By default it's false. If set to true, heightRange and itemRatioRange will be ignored. */
   preserveAspectRatio?: boolean;
-  /** Ref to the scroll element for infinity scrolling. Improve performance. */
+  /** A reference to the scroll element for implementing infinite scrolling, enhancing performance. */
   scrollRef: React.RefObject<HTMLElement>;
 };
 
@@ -45,7 +45,7 @@ const Gallery = <T extends SizeType>({
   itemRenderer,
   keyExtractor,
   gap = 0,
-  heightRange,
+  rowHeightRange,
   itemRatioRange,
   maxColumns,
   preserveAspectRatio,
@@ -58,7 +58,7 @@ const Gallery = <T extends SizeType>({
     items,
     containerWidth,
     gap,
-    heightRange,
+    rowHeightRange,
     itemRatioRange,
     maxColumns,
     preserveAspectRatio,

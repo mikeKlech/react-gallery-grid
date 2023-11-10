@@ -41,13 +41,13 @@ export declare class GalleryGrid<T extends SizeType> {
     private _items;
     containerWidth: number;
     gap: number;
-    heightRange: RangeType;
+    rowHeightRange: RangeType;
     itemRatioRange: RangeType;
     maxColumns: number | undefined;
     enableCrop: boolean | undefined;
     preserveAspectRatio: boolean | undefined;
     rows: Row<T>[];
-    constructor({ items, containerWidth, gap, heightRange, itemRatioRange, maxColumns, enableCrop, preserveAspectRatio, }: GalleryGridProps<T>);
+    constructor({ items, containerWidth, gap, rowHeightRange, itemRatioRange, maxColumns, enableCrop, preserveAspectRatio, }: GalleryGridProps<T>);
     addRow(row: Row<T>): void;
     fillRows(): Row<T>[];
 }
