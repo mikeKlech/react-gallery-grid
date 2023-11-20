@@ -32,6 +32,9 @@
   "dependencies": {
     "dequal": "^2.0.3"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mikeKlech/react-gallery-grid.git"
