@@ -37,7 +37,7 @@ type GalleryProps<T extends SizeType> = {
   /** By default it's false. If set to true, heightRange and itemRatioRange will be ignored. */
   preserveAspectRatio?: boolean;
   /** A reference to the scroll element for implementing infinite scrolling, enhancing performance. */
-  scrollRef: React.RefObject<HTMLElement>;
+  scrollRef?: React.RefObject<HTMLElement>;
 };
 
 const Gallery = <T extends SizeType>({
@@ -73,7 +73,7 @@ const Gallery = <T extends SizeType>({
   return (
     <div ref={measureRef} style={containerStyle}>
       <Virtualizer
-        scrollRef={scrollRef}
+        scrollRef={scrollRef || { current: null }}
         items={rows}
         gap={gap}
         containerRef={measureRef}

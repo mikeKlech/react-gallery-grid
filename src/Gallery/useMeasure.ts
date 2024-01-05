@@ -4,7 +4,7 @@ const useMeasure = () => {
   const measureRef = React.useRef<HTMLDivElement>(null);
   const [size, setSize] = React.useState({ width: 0, height: 0 });
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const handleMutation = () => {
       const elem = measureRef.current;
       if (!elem) return;
