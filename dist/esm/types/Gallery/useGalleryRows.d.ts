@@ -25,7 +25,7 @@ declare class GalleryGrid<T extends SizeType> {
     addRow(row: Row<T>): void;
     fillRows(): Row<T>[];
 }
-declare class Row<T extends SizeType> {
+export declare class Row<T extends SizeType> {
     items: RowItem<T>[];
     private _grid;
     constructor(grid: GalleryGrid<T>);

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Virtualizer from "./Virtualizer";
 import { BoxType, RangeType, SizeType } from "./types";
-import useGalleryRows from "./useGalleryRows";
+import useGalleryRows, { Row } from "./useGalleryRows";
 import useMeasure from "./useMeasure";
 
 type RendererProps<T extends SizeType> = {
@@ -63,6 +63,38 @@ const Gallery = <T extends SizeType>({
     maxColumns,
     preserveAspectRatio,
   });
+
+  const rowRenderer = (row: Row<T>, rowIdx: number) => {
+    const rowStyle: React.CSSProperties = {
+      display: "flex",
+      flexDirection: "row",
+      gap,
+      height: row.height,
+    };
+    return (
+      <div key={rowIdx} style={rowStyle}>
+        {row.items.map((rowItem, itemIdx) => {
+          const itemStyle: React.CSSProperties = rowItem.size;
+          const key = keyExtractor
+            ? keyExtractor(rowItem.content, itemIdx)
+            : itemIdx;
+          return (
+            <div key={key} style={itemStyle}>
+              {itemRenderer({
+                index: itemIdx,
+                item: rowItem.content,
+                size: rowItem.size,
+                cropBox: rowItem.cropBox,
+                fitBox: rowItem.fitBox,
+                aspectRatioPreserved: rowItem.aspectRatioPreserved,
+              })}
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   const containerStyle: React.CSSProperties = {
     display: "flex",
     flexDirection: "column",
@@ -70,44 +102,22 @@ const Gallery = <T extends SizeType>({
     gap,
   };
 
+  const withVirtualizer = !!scrollRef;
   return (
     <div ref={measureRef} style={containerStyle}>
-      <Virtualizer
-        scrollRef={scrollRef || { current: null }}
-        items={rows}
-        gap={gap}
-        containerRef={measureRef}
-        itemRenderer={({ item: row, index: rowIdx }) => {
-          const rowStyle: React.CSSProperties = {
-            display: "flex",
-            flexDirection: "row",
-            gap,
-            height: row.height,
-          };
-          return (
-            <div key={rowIdx} style={rowStyle}>
-              {row.items.map((rowItem, itemIdx) => {
-                const itemStyle: React.CSSProperties = rowItem.size;
-                const key = keyExtractor
-                  ? keyExtractor(rowItem.content, itemIdx)
-                  : itemIdx;
-                return (
-                  <div key={key} style={itemStyle}>
-                    {itemRenderer({
-                      index: itemIdx,
-                      item: rowItem.content,
-                      size: rowItem.size,
-                      cropBox: rowItem.cropBox,
-                      fitBox: rowItem.fitBox,
-                      aspectRatioPreserved: rowItem.aspectRatioPreserved,
-                    })}
-                  </div>
-                );
-              })}
-            </div>
-          );
-        }}
-      />
+      {withVirtualizer ? (
+        <Virtualizer
+          scrollRef={scrollRef}
+          items={rows}
+          gap={gap}
+          containerRef={measureRef}
+          itemRenderer={({ item: row, index: rowIdx }) =>
+            rowRenderer(row, rowIdx)
+          }
+        />
+      ) : (
+        <>{rows.map(rowRenderer)}</>
+      )}
     </div>
   );
 };

@@ -106,7 +106,7 @@ class GalleryGrid<T extends SizeType> {
   }
 }
 
-class Row<T extends SizeType> {
+export class Row<T extends SizeType> {
   items: RowItem<T>[] = [];
   private _grid;
   constructor(grid: GalleryGrid<T>) {

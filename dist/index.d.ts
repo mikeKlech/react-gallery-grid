@@ -48,7 +48,7 @@ type GalleryProps<T extends SizeType> = {
     /** By default it's false. If set to true, heightRange and itemRatioRange will be ignored. */
     preserveAspectRatio?: boolean;
     /** A reference to the scroll element for implementing infinite scrolling, enhancing performance. */
-    scrollRef: React.RefObject<HTMLElement>;
+    scrollRef?: React.RefObject<HTMLElement>;
 };
 declare const Gallery: <T extends SizeType>({ items, itemRenderer, keyExtractor, gap, rowHeightRange, itemRatioRange, maxColumns, preserveAspectRatio, scrollRef, }: GalleryProps<T>) => react_jsx_runtime.JSX.Element;
 

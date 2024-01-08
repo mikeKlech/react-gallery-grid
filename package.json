@@ -1,6 +1,6 @@
 {
   "name": "react-gallery-grid",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Justified grid for gallery.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
