@@ -16,7 +16,7 @@ interface RangeType {
     max: number;
 }
 
-type RendererProps<T extends SizeType> = {
+type RendererProps$1<T extends SizeType> = {
     /** The index of the item in the original array. */
     index: number;
     /** The rendering size of the item. */
@@ -34,7 +34,7 @@ type GalleryProps<T extends SizeType> = {
     /** Items need to be placed into the rows. Each item should have 'width' and 'height' properties. */
     items: T[];
     /** Renderer for every item where in props you can get extra info about the item and its size. */
-    itemRenderer: React.FC<RendererProps<T>>;
+    itemRenderer: React.FC<RendererProps$1<T>>;
     /** Optional key extractor for better performance. */
     keyExtractor?: (item: T, index: number) => string | number;
     /** Gap between rows and columns. */
@@ -52,4 +52,23 @@ type GalleryProps<T extends SizeType> = {
 };
 declare const Gallery: <T extends SizeType>({ items, itemRenderer, keyExtractor, gap, rowHeightRange, itemRatioRange, maxColumns, preserveAspectRatio, scrollRef, }: GalleryProps<T>) => react_jsx_runtime.JSX.Element;
 
-export { Gallery };
+type RendererProps<T extends {
+    height: number;
+}> = {
+    index: number;
+    item: T;
+};
+type VirtualizerProps<T extends {
+    height: number;
+}> = {
+    items: T[];
+    itemRenderer: React.FC<RendererProps<T>>;
+    gap?: number;
+    scrollRef: React.RefObject<HTMLElement>;
+    containerRef: React.RefObject<HTMLElement>;
+};
+declare const Virtualizer: <T extends {
+    height: number;
+}>({ items, itemRenderer, gap, scrollRef, containerRef, }: VirtualizerProps<T>) => react_jsx_runtime.JSX.Element;
+
+export { Gallery, Virtualizer };

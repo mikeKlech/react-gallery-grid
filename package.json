@@ -1,12 +1,13 @@
 {
   "name": "react-gallery-grid",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Justified grid for gallery.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
+    "zip": "npm pack",
     "test": "ts-jest"
   },
   "author": "mikeKlech",
