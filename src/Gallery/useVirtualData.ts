@@ -1,3 +1,4 @@
+import debounce from "debounce";
 import React from "react";
 import { RangeType } from "./types";
 import useDeepEffect from "./useDeepEffect";
@@ -85,11 +86,13 @@ const useVirtualData = <T extends { height: number }>(
         setData(data);
       }
     };
-    handleScroll();
+    const debouncedScroll = debounce(handleScroll, 5);
+    debouncedScroll();
     const scrollDOM = scrollRef.current;
-    scrollDOM?.addEventListener("scroll", handleScroll);
+    scrollDOM?.addEventListener("scroll", debouncedScroll);
     return () => {
-      scrollDOM?.removeEventListener("scroll", handleScroll);
+      debouncedScroll.clear();
+      scrollDOM?.removeEventListener("scroll", debouncedScroll);
     };
   }, [items.map((i) => i.height), gap, scrollRef, containerRef]);
   return data;
