@@ -1,4 +1,3 @@
-import debounce from "debounce";
 import React from "react";
 import { RangeType } from "./types";
 import useDeepEffect from "./useDeepEffect";
@@ -12,6 +11,8 @@ type VirtualDataType = {
   /**Includes "to" */
   showToIndex: number;
 };
+
+const threshold = 1000;
 
 const getVirtualData = <T extends { height: number }>(
   items: T[],
@@ -29,12 +30,11 @@ const getVirtualData = <T extends { height: number }>(
   const containerRect = container.getBoundingClientRect();
 
   const offset = containerRect.top - scrollRect.top;
-  const trashold = 500;
 
   const scrollClientHeight = scroll.clientHeight;
   const visibleRange: RangeType = {
-    min: 0 - trashold,
-    max: scrollClientHeight + trashold,
+    min: 0 - threshold,
+    max: scrollClientHeight + threshold,
   };
 
   items.forEach((item, index) => {
@@ -74,8 +74,9 @@ const useVirtualData = <T extends { height: number }>(
     showFromIndex: 0,
     showToIndex: items.length - 1,
   });
+  const prevScrollTopRef = React.useRef<number>(0);
   useDeepEffect(() => {
-    const handleScroll = () => {
+    const calculateData = () => {
       if (scrollRef.current && containerRef.current) {
         const data = getVirtualData(
           items,
@@ -84,15 +85,24 @@ const useVirtualData = <T extends { height: number }>(
           containerRef.current
         );
         setData(data);
+        prevScrollTopRef.current = scrollRef.current.scrollTop;
       }
     };
-    const debouncedScroll = debounce(handleScroll, 5);
-    debouncedScroll();
+    const handleScroll = () => {
+      if (scrollRef.current) {
+        const prevScrollTop = prevScrollTopRef.current;
+        const currentScrollTop = scrollRef.current.scrollTop;
+        //Calculate new data only when we scroll by threshold value(almost out of view)
+        if (Math.abs(prevScrollTop - currentScrollTop) > threshold) {
+          calculateData();
+        }
+      }
+    };
+    calculateData();
     const scrollDOM = scrollRef.current;
-    scrollDOM?.addEventListener("scroll", debouncedScroll);
+    scrollDOM?.addEventListener("scroll", handleScroll);
     return () => {
-      debouncedScroll.clear();
-      scrollDOM?.removeEventListener("scroll", debouncedScroll);
+      scrollDOM?.removeEventListener("scroll", handleScroll);
     };
   }, [items.map((i) => i.height), gap, scrollRef, containerRef]);
   return data;
