@@ -73,15 +73,15 @@ const Gallery = <T extends SizeType>({
     };
     return (
       <div key={rowIdx} style={rowStyle}>
-        {row.items.map((rowItem, itemIdx) => {
+        {row.items.map((rowItem) => {
           const itemStyle: React.CSSProperties = rowItem.size;
           const key = keyExtractor
-            ? keyExtractor(rowItem.content, itemIdx)
-            : itemIdx;
+            ? keyExtractor(rowItem.content, rowItem.idx)
+            : rowItem.idx;
           return (
             <div key={key} style={itemStyle}>
               {itemRenderer({
-                index: itemIdx,
+                index: rowItem.idx,
                 item: rowItem.content,
                 size: rowItem.size,
                 cropBox: rowItem.cropBox,

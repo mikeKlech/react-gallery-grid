@@ -78,7 +78,7 @@ class GalleryGrid<T extends SizeType> {
     this.rows.push(row);
   }
   fillRows() {
-    this._items.forEach((item) => {
+    this._items.forEach((item, idx) => {
       let row = this.rows[this.rows.length - 1];
       if (!row) {
         const newRow = new Row(this);
@@ -87,17 +87,17 @@ class GalleryGrid<T extends SizeType> {
       }
 
       if (row.columns === 0) {
-        row.addItem(item);
+        row.addItem(item, idx);
       } else {
         if (row.canAddItem(item)) {
-          row.addItem(item);
+          row.addItem(item, idx);
         } else {
           //Adjust last row.
           row.adjust();
 
           //Add item to new row.
           const newRow = new Row(this);
-          newRow.addItem(item);
+          newRow.addItem(item, idx);
           this.addRow(newRow);
         }
       }
@@ -151,12 +151,12 @@ export class Row<T extends SizeType> {
       max: maxRatio,
     };
   }
-  addItem(item: T) {
-    this.items.push(new RowItem(item, this));
+  addItem(item: T, idx: number) {
+    this.items.push(new RowItem(item, idx, this));
   }
   canAddItem(item: T) {
     const newRow = this.clone(this._grid);
-    newRow.addItem(item);
+    newRow.addItem(item, 0);
     const { max: newMaxRatio } = newRow.ratioRange;
     const fitRatio = newRow.ratio <= newMaxRatio;
     const fitMaxColumns = this._grid.maxColumns
@@ -203,10 +203,12 @@ export class Row<T extends SizeType> {
 
 class RowItem<T extends SizeType> {
   content;
+  idx;
   private _row;
   private _ratio;
-  constructor(content: T, row: Row<T>) {
+  constructor(content: T, idx: number, row: Row<T>) {
     this.content = content;
+    this.idx = idx;
     this._row = row;
     this._ratio = clamp(
       getRatio(content),
@@ -243,6 +245,6 @@ class RowItem<T extends SizeType> {
     return this.originalRatio === this.ratio;
   }
   clone(parentRow: Row<T>): RowItem<T> {
-    return new RowItem(this.content, parentRow);
+    return new RowItem(this.content, this.idx, parentRow);
   }
 }

@@ -36,7 +36,7 @@ export declare class Row<T extends SizeType> {
     get ratio(): number;
     get columns(): number;
     get ratioRange(): RangeType;
-    addItem(item: T): void;
+    addItem(item: T, idx: number): void;
     canAddItem(item: T): boolean;
     clone(parent: GalleryGrid<T>): Row<T>;
     /**
@@ -46,9 +46,10 @@ export declare class Row<T extends SizeType> {
 }
 declare class RowItem<T extends SizeType> {
     content: T;
+    idx: number;
     private _row;
     private _ratio;
-    constructor(content: T, row: Row<T>);
+    constructor(content: T, idx: number, row: Row<T>);
     get ratioRange(): RangeType;
     get ratio(): number;
     set ratio(r: number);
