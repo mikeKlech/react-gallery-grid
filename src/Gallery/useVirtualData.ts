@@ -38,22 +38,24 @@ const getVirtualData = <T extends { height: number }>(
   };
 
   items.forEach((item, index) => {
-    const height = item.height + gap;
+    const height = item.height;
     const itemTop = offset + passedHeight;
     const itemBottom = itemTop + height;
 
     if (visibleRange.min > itemBottom) {
       //before visible
-      headerHeight += height;
+      const isFirst = index === 0;
+      headerHeight += (isFirst ? 0 : gap) + height;
       showFromIndex = index + 1;
     } else if (visibleRange.max > itemTop) {
       //visible
       showToIndex = index;
     } else {
       //after visible
-      footerHeight += height;
+      const isLast = index === items.length - 1;
+      footerHeight += height + (isLast ? 0 : gap);
     }
-    passedHeight += height;
+    passedHeight += height + gap;
   });
   return {
     headerHeight,
