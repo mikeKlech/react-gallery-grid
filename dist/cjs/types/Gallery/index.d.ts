@@ -21,8 +21,12 @@ type GalleryProps<T extends SizeType> = {
     itemRenderer: React.FC<RendererProps<T>>;
     /** Optional key extractor for better performance. */
     keyExtractor?: (item: T, index: number) => string | number;
-    /** Gap between rows and columns. */
+    /** Gap between rows and columns. If provided, overrides gapX and gapY. */
     gap?: number;
+    /** Gap between columns (horizontal spacing). */
+    gapX?: number;
+    /** Gap between rows (vertical spacing). */
+    gapY?: number;
     /** Minimum and maximum row heights. Works when preserveAspectRatio is set to false.*/
     rowHeightRange?: RangeType;
     /** Minimum and maximum aspect ratio of every item. Works when preserveAspectRatio is set to false.*/
@@ -34,5 +38,5 @@ type GalleryProps<T extends SizeType> = {
     /** A reference to the scroll element for implementing infinite scrolling, enhancing performance. */
     scrollRef?: React.RefObject<HTMLElement>;
 };
-declare const Gallery: <T extends SizeType>({ items, itemRenderer, keyExtractor, gap, rowHeightRange, itemRatioRange, maxColumns, preserveAspectRatio, scrollRef, }: GalleryProps<T>) => import("react/jsx-runtime").JSX.Element;
+declare const Gallery: <T extends SizeType>({ items, itemRenderer, keyExtractor, gap, gapX, gapY, rowHeightRange, itemRatioRange, maxColumns, preserveAspectRatio, scrollRef, }: GalleryProps<T>) => import("react/jsx-runtime").JSX.Element;
 export default Gallery;
