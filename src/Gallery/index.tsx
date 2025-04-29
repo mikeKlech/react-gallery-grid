@@ -26,8 +26,12 @@ type GalleryProps<T extends SizeType> = {
   itemRenderer: React.FC<RendererProps<T>>;
   /** Optional key extractor for better performance. */
   keyExtractor?: (item: T, index: number) => string | number;
-  /** Gap between rows and columns. */
+  /** Gap between rows and columns. If provided, overrides gapX and gapY. */
   gap?: number;
+  /** Gap between columns (horizontal spacing). */
+  gapX?: number;
+  /** Gap between rows (vertical spacing). */
+  gapY?: number;
   /** Minimum and maximum row heights. Works when preserveAspectRatio is set to false.*/
   rowHeightRange?: RangeType;
   /** Minimum and maximum aspect ratio of every item. Works when preserveAspectRatio is set to false.*/
@@ -45,6 +49,8 @@ const Gallery = <T extends SizeType>({
   itemRenderer,
   keyExtractor,
   gap = 0,
+  gapX,
+  gapY,
   rowHeightRange,
   itemRatioRange,
   maxColumns,
@@ -53,11 +59,15 @@ const Gallery = <T extends SizeType>({
 }: GalleryProps<T>) => {
   const { measureRef, size } = useMeasure();
   const containerWidth = size.width || 500;
+  
+  // Use gap for both if specific gaps aren't provided
+  const horizontalGap = gapX !== undefined ? gapX : gap;
+  const verticalGap = gapY !== undefined ? gapY : gap;
 
   const rows = useGalleryRows({
     items,
     containerWidth,
-    gap,
+    gap: horizontalGap, // Pass the horizontal gap to row calculation
     rowHeightRange,
     itemRatioRange,
     maxColumns,
@@ -68,7 +78,7 @@ const Gallery = <T extends SizeType>({
     const rowStyle: React.CSSProperties = {
       display: "flex",
       flexDirection: "row",
-      gap,
+      gap: horizontalGap,
       height: row.height,
     };
     return (
@@ -99,7 +109,7 @@ const Gallery = <T extends SizeType>({
     display: "flex",
     flexDirection: "column",
     width: "100%",
-    gap,
+    gap: verticalGap,
   };
 
   const withVirtualizer = !!scrollRef;
@@ -109,7 +119,7 @@ const Gallery = <T extends SizeType>({
         <Virtualizer
           scrollRef={scrollRef}
           items={rows}
-          gap={gap}
+          gap={verticalGap}
           containerRef={measureRef}
           itemRenderer={({ item: row, index: rowIdx }) =>
             rowRenderer(row, rowIdx)
